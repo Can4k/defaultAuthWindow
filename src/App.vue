@@ -1,20 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <button @click="openAuth">ОТКРЫТЬ ОКНО</button>
+  <auntification @closeWindow="isAuthWindowActive = false" :is-auth-window-active="isAuthWindowActive"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Auntification from "@/components/authWindow/auntification";
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Auntification
+  },
+  methods: {
+    openAuth() {
+      this.isAuthWindowActive = true;
+    }
+  },
+  data() {
+    return {
+      isAuthWindowActive: false
+    }
   }
 }
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
