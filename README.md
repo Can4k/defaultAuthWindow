@@ -1,4 +1,6 @@
-# auntification
+# Default Auth Window (by Can4k)
+
+Обычный фронт без бэка
 
 ## Project setup
 ```
